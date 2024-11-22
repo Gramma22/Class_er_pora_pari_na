@@ -6,10 +6,10 @@ Expected Output :
 #include <stdio.h>
 int main()
 {
-    int n, rem,original, rev = 0;
+    int n, rem, original, rev = 0;
     printf("Enter an integer: ");
     scanf("%d", &n);
-    for (original = n; n != 0 ; n /= 10)
+    for (original = n; n != 0; n /= 10)
     {
         rem = n % 10;
         rev = rev * 10 + rem;

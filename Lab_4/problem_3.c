@@ -4,39 +4,27 @@ difference between the Highest and Lowest number.*/
 
 int main()
 {
-    int num =0, max= -999999, min=999999 ;
+    int num = 0, max = -999999, min = 999999;
     printf("Enter an integer: ");
     while (1)
     {
         scanf("%d", &num);
-        if (num == -1 )
+        if (num == -1)
         {
             break;
         }
-        else if (num >max )
+        else if (num > max)
         {
-            max =num;
+            max = num;
         }
-        else if(num<min)
+        else if (num < min)
         {
             min = num;
         }
-
     }
     int dif = max - min;
     printf("%d", dif);
     return 0;
-    
 }
-
-
-
-
-
-
-
-
-
-
 
 // By sAhAf

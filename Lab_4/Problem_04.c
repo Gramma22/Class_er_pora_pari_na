@@ -4,20 +4,16 @@ as follows. The program should have a while repetition statement.*/
 
 int main()
 {
-    int base, exponent, result = 1;
-
+    int expo, result = 1, base;
     printf("Enter base: ");
     scanf("%d", &base);
     printf("Enter exponent: ");
-    scanf("%d", &exponent);
-
-    int count = 0;
-    while (count < exponent)
+    scanf("%d", &expo);
+    for (int count = 0; count < expo; count++)
     {
         result *= base;
-        count++;
+        // printf("result = %d\n", result);
     }
-    printf("%d^%d = %d\n", base, exponent, result);
-
+    printf("%d^%d = %d\n", base, expo, result);
     return 0;
 }

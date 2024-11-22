@@ -8,24 +8,20 @@ Write a program that reads a nonnegative integer, and computes and prints its fa
 
 int main()
 {
-    int n, factorial = 1;
-
+    int result = 1, factor;
     printf("Enter a positive integer: ");
-    scanf("%d", &n);
-
-    if (n < 0)
+    scanf("%d", &factor);
+    if (factor < 0)
     {
         printf("Factorial is not possible for negative numbers. Try again.\n");
     }
     else
     {
-        int i = 1;
-        while (i <= n)
+        for (int count = 1; count <= factor; count++)
         {
-            factorial *= i;
-            i++;
+            result *= count;
         }
-        printf("Factorial of %d is %d\n", n, factorial);
+        printf("Factorial of %d is %d\n", factor, result);
     }
 
     return 0;

@@ -10,22 +10,14 @@ int main()
     if (a == 0)
     {
         printf("The number 0 cannot be divided by 2.\n");
-        return 0;
-    }
-    else if (a < 0)
-    {
-        a = -a;
-    }
-    else
-    {
-        int original = a;
-        while ((a % 2) == 0)
-        {
-            a /= 2;
-            count++;
-        }
-        printf("The number %d can be divided by 2 exactly %d times.", original, count);
     }
 
+    int original = a;
+    while ((a % 2) == 0 && a != 0)
+    {
+        a /= 2;
+        count++;
+    }
+    printf("The number %d can be divided by 2 exactly %d times.", original, count);
     return 0;
 }

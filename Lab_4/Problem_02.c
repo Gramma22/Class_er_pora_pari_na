@@ -7,14 +7,25 @@ int main()
 
     printf("Enter a integer: ");
     scanf("%d", &a);
-    int original = a;
-    while (num == 0)
+    if (a == 0)
     {
-        num = a % 2;
-        a /= 2;
-        count++;
+        printf("The number 0 cannot be divided by 2.\n");
+        return 0;
     }
-    printf("The number %d can be divided by 2 exactly %d times.", original, count - 1);
+    else if (a < 0)
+    {
+        a = -a;
+    }
+    else
+    {
+        int original = a;
+        while ((a % 2) == 0)
+        {
+            a /= 2;
+            count++;
+        }
+        printf("The number %d can be divided by 2 exactly %d times.", original, count);
+    }
 
     return 0;
 }

@@ -5,7 +5,10 @@ int main()
 {
     int digit = 0, sum = 0, num;
     scanf("%d", &num);
-
+    if (num < 0)
+    {
+        num = -num;
+    }
     while (num > 0)
     {
         digit = num % 10;

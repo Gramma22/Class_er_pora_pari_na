@@ -9,11 +9,20 @@ int main()
     scanf("%d", &base);
     printf("Enter exponent: ");
     scanf("%d", &expo);
-    for (int count = 0; count < expo; count++)
+    if (expo < 0)
     {
-        result *= base;
-        // printf("result = %d\n", result);
+        printf("Negative exponents are not supported right now. Sorry :) ");
     }
-    printf("%d^%d = %d\n", base, expo, result);
+    else
+    {
+        int count = 0;
+        while (count < expo)
+        {
+            result *= base;
+            count++;
+        }
+        printf("%d^%d = %d\n", base, expo, result);
+    }
+
     return 0;
 }
